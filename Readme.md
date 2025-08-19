@@ -8,4 +8,4 @@
 5. Tudo o que estiver "Debug" coloque para "Release", e depois feche.
 5. Clique em "Product" denovo, depois em "Build", depois em "Archive"
 7. Selecione com botão direito o arquivo, depois clique em "Abrir com Finder"
-8. Crie uma pasta, jogue o arquivo lá, comprima, e troque o .zip por .ipa
+8. Crie uma pasta, clique com botão direito no arquivo, clique em "Mostrar conteúdo do pacote", selecione o .app, jogue dentro daquela pasta criada, comprima, e troque o .zip por .ipa
