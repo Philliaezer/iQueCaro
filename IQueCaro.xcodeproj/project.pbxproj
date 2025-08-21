@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AC10FDEF2E562B930001A1CD /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10FDEE2E562B930001A1CD /* SecondView.swift */; };
 		AC22638E2E573D0E00D05A9A /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC22638D2E573D0E00D05A9A /* CardListView.swift */; };
+		AC2263962E57644A00D05A9A /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2263952E57644A00D05A9A /* KeyboardViewController.swift */; };
+		AC22639A2E57644A00D05A9A /* Autodatil.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AC2263932E57644A00D05A9A /* Autodatil.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AC9BB21D2E5361B6000B2BBE /* IQueCaroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9BB21C2E5361B6000B2BBE /* IQueCaroApp.swift */; };
 		AC9BB21F2E5361B6000B2BBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9BB21E2E5361B6000B2BBE /* ContentView.swift */; };
 		AC9BB2212E5361C6000B2BBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9BB2202E5361C6000B2BBE /* Assets.xcassets */; };
@@ -19,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AC2263982E57644A00D05A9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC9BB2112E5361B5000B2BBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC2263922E57644A00D05A9A;
+			remoteInfo = Autodatil;
+		};
 		AC9BB22A2E5361C6000B2BBE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AC9BB2112E5361B5000B2BBE /* Project object */;
@@ -35,9 +44,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AC22639E2E57644A00D05A9A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AC22639A2E57644A00D05A9A /* Autodatil.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		AC10FDEE2E562B930001A1CD /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		AC22638D2E573D0E00D05A9A /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
+		AC2263932E57644A00D05A9A /* Autodatil.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Autodatil.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2263952E57644A00D05A9A /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		AC2263972E57644A00D05A9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC9BB2192E5361B6000B2BBE /* IQueCaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IQueCaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9BB21C2E5361B6000B2BBE /* IQueCaroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQueCaroApp.swift; sourceTree = "<group>"; };
 		AC9BB21E2E5361B6000B2BBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +77,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AC2263902E57644A00D05A9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AC9BB2162E5361B6000B2BBE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -75,12 +108,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC2263942E57644A00D05A9A /* Autodatil */ = {
+			isa = PBXGroup;
+			children = (
+				AC2263952E57644A00D05A9A /* KeyboardViewController.swift */,
+				AC2263972E57644A00D05A9A /* Info.plist */,
+			);
+			path = Autodatil;
+			sourceTree = "<group>";
+		};
 		AC9BB2102E5361B5000B2BBE = {
 			isa = PBXGroup;
 			children = (
 				AC9BB21B2E5361B6000B2BBE /* IQueCaro */,
 				AC9BB22C2E5361C6000B2BBE /* IQueCaroTests */,
 				AC9BB2362E5361C6000B2BBE /* IQueCaroUITests */,
+				AC2263942E57644A00D05A9A /* Autodatil */,
 				AC9BB21A2E5361B6000B2BBE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +134,7 @@
 				AC9BB2192E5361B6000B2BBE /* IQueCaro.app */,
 				AC9BB2292E5361C6000B2BBE /* IQueCaroTests.xctest */,
 				AC9BB2332E5361C6000B2BBE /* IQueCaroUITests.xctest */,
+				AC2263932E57644A00D05A9A /* Autodatil.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +180,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AC2263922E57644A00D05A9A /* Autodatil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC22639B2E57644A00D05A9A /* Build configuration list for PBXNativeTarget "Autodatil" */;
+			buildPhases = (
+				AC22638F2E57644A00D05A9A /* Sources */,
+				AC2263902E57644A00D05A9A /* Frameworks */,
+				AC2263912E57644A00D05A9A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Autodatil;
+			productName = Autodatil;
+			productReference = AC2263932E57644A00D05A9A /* Autodatil.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		AC9BB2182E5361B6000B2BBE /* IQueCaro */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC9BB23D2E5361C6000B2BBE /* Build configuration list for PBXNativeTarget "IQueCaro" */;
@@ -143,10 +204,12 @@
 				AC9BB2152E5361B6000B2BBE /* Sources */,
 				AC9BB2162E5361B6000B2BBE /* Frameworks */,
 				AC9BB2172E5361B6000B2BBE /* Resources */,
+				AC22639E2E57644A00D05A9A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AC2263992E57644A00D05A9A /* PBXTargetDependency */,
 			);
 			name = IQueCaro;
 			productName = IQueCaro;
@@ -196,9 +259,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					AC2263922E57644A00D05A9A = {
+						CreatedOnToolsVersion = 14.3;
+					};
 					AC9BB2182E5361B6000B2BBE = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -228,11 +294,19 @@
 				AC9BB2182E5361B6000B2BBE /* IQueCaro */,
 				AC9BB2282E5361C6000B2BBE /* IQueCaroTests */,
 				AC9BB2322E5361C6000B2BBE /* IQueCaroUITests */,
+				AC2263922E57644A00D05A9A /* Autodatil */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AC2263912E57644A00D05A9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AC9BB2172E5361B6000B2BBE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,6 +333,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AC22638F2E57644A00D05A9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC2263962E57644A00D05A9A /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AC9BB2152E5361B6000B2BBE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,6 +372,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		AC2263992E57644A00D05A9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC2263922E57644A00D05A9A /* Autodatil */;
+			targetProxy = AC2263982E57644A00D05A9A /* PBXContainerItemProxy */;
+		};
 		AC9BB22B2E5361C6000B2BBE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AC9BB2182E5361B6000B2BBE /* IQueCaro */;
@@ -303,6 +390,57 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		AC22639C2E57644A00D05A9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Autodatil/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Autodatil;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = philliaezer.IQueCaro.Autodatil;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC22639D2E57644A00D05A9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Autodatil/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Autodatil;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = philliaezer.IQueCaro.Autodatil;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		AC9BB23B2E5361C6000B2BBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -420,6 +558,7 @@
 		AC9BB23E2E5361C6000B2BBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGNING_ALLOWED = NO;
@@ -454,6 +593,7 @@
 		AC9BB23F2E5361C6000B2BBE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGNING_ALLOWED = NO;
@@ -558,6 +698,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AC22639B2E57644A00D05A9A /* Build configuration list for PBXNativeTarget "Autodatil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC22639C2E57644A00D05A9A /* Debug */,
+				AC22639D2E57644A00D05A9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AC9BB2142E5361B5000B2BBE /* Build configuration list for PBXProject "IQueCaro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
