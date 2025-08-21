@@ -10,7 +10,9 @@ import SwiftUI
 struct ContentView: View {
     @State private var showingPopover = false
     @State private var searchText: String = ""
-    let allItems = ["Apple", "Banana", "Orange", "Grape", "Pineapple"]
+    let allItems = ["Sobre o iQueCaro", "Mensagens", "Documentos", "Arquivos", "Sua Conta"]
+    let allIcons = ["folder.badge.plus", "tray.full", "doc.on.clipboard", "paperclip", "person.crop.circle"]
+    let coun = 0
     
     var filteredItems: [String] {
         if searchText.isEmpty {
@@ -29,24 +31,105 @@ struct ContentView: View {
                     VStack {
                         
                         TabView {
-                                NavigationStack {
-                                    List(filteredItems, id: \.self) { item in
-                                        Text(item)
+                            // == INICIO ==
+                            NavigationStack {
+                                List {
+                                    ForEach(Array(filteredItems.enumerated()), id: \.element) { index, item in
+                                        if item == "Sobre o iQueCaro" {
+                                            NavigationLink {
+                                                SecondView(selectedItem: item)
+                                            } label: {
+                                                Image(systemName: "dollarsign.circle.fill")
+                                                Text(item)
+                                            }
+                                        } else {
+                                            NavigationLink {
+                                                SecondView(selectedItem: item)
+                                            } label: {
+                                                Image(systemName: allIcons[index])
+                                                Text(item)
+                                            }
+                                        }
                                     }
-                                    .searchable(text: $searchText, prompt: "Pesquise coisas caras")
-                                    .navigationTitle("iQueCaro")
-                                    
-                                    
-                                    /*.toolbarBackground(.teal, for: .navigationBar)
-                                     .toolbarBackground(.visible, for: .navigationBar)*/
                                 }
-                                .tabItem {
-                                    Label("Inicio", systemImage: "dollarsign.circle.fill")
-                                }
+                                .searchable(text: $searchText, prompt: "Pesquise coisas caras")
+                                .navigationTitle("iQueCaro")
+                            }
+                            .tabItem {
+                                Label("Inicio", systemImage: "dollarsign.circle.fill")
+                            }
                             
-                            VStack {
-                                Text("Settings Content")
-                                Spacer()
+                            // == CONFIGURAÇÕES ==
+                            NavigationStack {
+                                VStack {
+                                    List {
+                                        Section(header: Text("Gerais")){
+                                            ForEach(Array(filteredItems.enumerated()), id: \.element) { index, item in
+                                                if item == "Sobre o iQueCaro" {
+                                                    NavigationLink {
+                                                        SecondView(selectedItem: item)
+                                                    } label: {
+                                                        Image(systemName: "dollarsign.circle.fill")
+                                                        Text(item)
+                                                    }
+                                                } else {
+                                                    NavigationLink {
+                                                        SecondView(selectedItem: item)
+                                                    } label: {
+                                                        Image(systemName: allIcons[index])
+                                                        Text(item)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        
+                                        Section(header: Text("Da conta")){
+                                            ForEach(Array(filteredItems.enumerated()), id: \.element) { index, item in
+                                                if item == "Sobre o iQueCaro" {
+                                                    NavigationLink {
+                                                        SecondView(selectedItem: item)
+                                                    } label: {
+                                                        Image(systemName: "dollarsign.circle.fill")
+                                                        Text(item)
+                                                    }
+                                                } else {
+                                                    NavigationLink {
+                                                        SecondView(selectedItem: item)
+                                                    } label: {
+                                                        Image(systemName: allIcons[index])
+                                                        Text(item)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    
+                                    /*HStack {
+                                        Text("Outros")
+                                        Spacer()
+                                    }
+                                    List {
+                                        ForEach(Array(filteredItems.enumerated()), id: \.element) { index, item in
+                                            if item == "Sobre o iQueCaro" {
+                                                NavigationLink {
+                                                    SecondView(selectedItem: item)
+                                                } label: {
+                                                    Image(systemName: "dollarsign.circle.fill")
+                                                    Text(item)
+                                                }
+                                            } else {
+                                                NavigationLink {
+                                                    SecondView(selectedItem: item)
+                                                } label: {
+                                                    Image(systemName: allIcons[index])
+                                                    Text(item)
+                                                }
+                                            }
+                                        }
+                                    }*/
+                                    Spacer()
+                                }
+                                .navigationTitle("Config.")
                             }
                             .tabItem {
                                 Label("Configurações", systemImage: "gearshape.fill")
@@ -54,25 +137,6 @@ struct ContentView: View {
                         }
                     }
                 }
-                
-            /*
-             VStack {
-                HStack {
-                    Text("iQueCaro")
-                }
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                Text("Olá usuário!")
-                Text("Este app foi feito pelo Anderson")
-                Button("Pressione"){
-                    showingPopover = true
-                }
-                .popover(isPresented: $showingPopover){
-                        Text("Teste de caixa de dialogo")
-                }
-            }
-             */
             )
     }
 }
