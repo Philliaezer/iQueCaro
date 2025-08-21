@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC10FDEF2E562B930001A1CD /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC10FDEE2E562B930001A1CD /* SecondView.swift */; };
+		AC22638E2E573D0E00D05A9A /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC22638D2E573D0E00D05A9A /* CardListView.swift */; };
 		AC9BB21D2E5361B6000B2BBE /* IQueCaroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9BB21C2E5361B6000B2BBE /* IQueCaroApp.swift */; };
 		AC9BB21F2E5361B6000B2BBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9BB21E2E5361B6000B2BBE /* ContentView.swift */; };
 		AC9BB2212E5361C6000B2BBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9BB2202E5361C6000B2BBE /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		AC10FDEE2E562B930001A1CD /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		AC22638D2E573D0E00D05A9A /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 		AC9BB2192E5361B6000B2BBE /* IQueCaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IQueCaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9BB21C2E5361B6000B2BBE /* IQueCaroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQueCaroApp.swift; sourceTree = "<group>"; };
 		AC9BB21E2E5361B6000B2BBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				AC9BB21C2E5361B6000B2BBE /* IQueCaroApp.swift */,
 				AC9BB21E2E5361B6000B2BBE /* ContentView.swift */,
 				AC10FDEE2E562B930001A1CD /* SecondView.swift */,
+				AC22638D2E573D0E00D05A9A /* CardListView.swift */,
 				AC9BB2202E5361C6000B2BBE /* Assets.xcassets */,
 				AC9BB2222E5361C6000B2BBE /* Preview Content */,
 			);
@@ -262,6 +265,7 @@
 			files = (
 				AC10FDEF2E562B930001A1CD /* SecondView.swift in Sources */,
 				AC9BB21F2E5361B6000B2BBE /* ContentView.swift in Sources */,
+				AC22638E2E573D0E00D05A9A /* CardListView.swift in Sources */,
 				AC9BB21D2E5361B6000B2BBE /* IQueCaroApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

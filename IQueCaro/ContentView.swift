@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var showingPopover = false
     @State private var searchText: String = ""
     let allItems = ["Sobre o iQueCaro", "Mensagens", "Documentos", "Arquivos", "Sua Conta"]
+    let expensiveList = ["iMac Pro", "iPad Pro", "iPhone 16 Pro Max", "Apple Watch Ultra", "iMeuDeusMeuBolso"]
     let allIcons = ["folder.badge.plus", "tray.full", "doc.on.clipboard", "paperclip", "person.crop.circle"]
     let coun = 0
     
@@ -19,6 +20,15 @@ struct ContentView: View {
             return allItems
         } else {
             return allItems.filter { $0.localizedCaseInsensitiveContains(searchText)
+            }
+        }
+    }
+    
+    var filteredItemsStore: [String] {
+        if searchText.isEmpty {
+            return expensiveList
+        } else {
+            return expensiveList.filter { $0.localizedCaseInsensitiveContains(searchText)
             }
         }
     }
@@ -34,26 +44,28 @@ struct ContentView: View {
                             // == INICIO ==
                             NavigationStack {
                                 List {
-                                    ForEach(Array(filteredItems.enumerated()), id: \.element) { index, item in
+                                    ForEach(Array(filteredItemsStore.enumerated()), id: \.element) { index, item in
                                         if item == "Sobre o iQueCaro" {
                                             NavigationLink {
                                                 SecondView(selectedItem: item)
                                             } label: {
-                                                Image(systemName: "dollarsign.circle.fill")
-                                                Text(item)
+                                                CardListView("iMac Pro", "Este é um iMac Pro")
                                             }
                                         } else {
                                             NavigationLink {
                                                 SecondView(selectedItem: item)
                                             } label: {
-                                                Image(systemName: allIcons[index])
-                                                Text(item)
+                                                CardListView(item, "descrição")
                                             }
                                         }
                                     }
+                                    
+                                    .listRowBackground(Color.clear)
                                 }
                                 .searchable(text: $searchText, prompt: "Pesquise coisas caras")
                                 .navigationTitle("iQueCaro")
+                                
+                                CardListView("Titulo", "Este é um exemplo de descrição")
                             }
                             .tabItem {
                                 Label("Inicio", systemImage: "dollarsign.circle.fill")
