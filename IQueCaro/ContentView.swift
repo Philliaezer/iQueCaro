@@ -49,13 +49,13 @@ struct ContentView: View {
                                     ForEach(Array(filteredItemsStore.enumerated()), id: \.element) { index, item in
                                         if item == "Sobre o iQueCaro" {
                                             NavigationLink {
-                                                SecondView(selectedItem: item)
+                                                SecondView(item)
                                             } label: {
                                                 CardListView("iMac Pro", "Este é um iMac Pro")
                                             }
                                         } else {
                                             NavigationLink {
-                                                SecondView(selectedItem: item)
+                                                SecondView(item, expensiveIcons[index])
                                             } label: {
                                                 CardListView(item, "descrição", expensiveIcons[index])
                                             }
@@ -79,14 +79,14 @@ struct ContentView: View {
                                             ForEach(Array(filteredItems.enumerated()), id: \.element) { index, item in
                                                 if item == "Sobre o iQueCaro" {
                                                     NavigationLink {
-                                                        SecondView(selectedItem: item)
+                                                        SecondView(item)
                                                     } label: {
                                                         Image(systemName: "dollarsign.circle.fill")
                                                         Text(item)
                                                     }
                                                 } else {
                                                     NavigationLink {
-                                                        SecondView(selectedItem: item)
+                                                        SecondView(item)
                                                     } label: {
                                                         Image(systemName: allIcons[index])
                                                         Text(item)
@@ -99,14 +99,14 @@ struct ContentView: View {
                                             ForEach(Array(filteredItems.enumerated()), id: \.element) { index, item in
                                                 if item == "Sobre o iQueCaro" {
                                                     NavigationLink {
-                                                        SecondView(selectedItem: item)
+                                                        SecondView(item)
                                                     } label: {
                                                         Image(systemName: "dollarsign.circle.fill")
                                                         Text(item)
                                                     }
                                                 } else {
                                                     NavigationLink {
-                                                        SecondView(selectedItem: item)
+                                                        SecondView(item)
                                                     } label: {
                                                         Image(systemName: allIcons[index])
                                                         Text(item)
