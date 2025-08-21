@@ -9,12 +9,57 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showingPopover = false
+    @State private var searchText: String = ""
+    let allItems = ["Apple", "Banana", "Orange", "Grape", "Pineapple"]
+    
+    var filteredItems: [String] {
+        if searchText.isEmpty {
+            return allItems
+        } else {
+            return allItems.filter { $0.localizedCaseInsensitiveContains(searchText)
+            }
+        }
+    }
     
     var body: some View {
         Color.white
-            .ignoresSafeArea(.all)
+            .edgesIgnoringSafeArea(.all)
             .overlay(
-            VStack {
+                ZStack {
+                    VStack {
+                        
+                        TabView {
+                                NavigationStack {
+                                    List(filteredItems, id: \.self) { item in
+                                        Text(item)
+                                    }
+                                    .searchable(text: $searchText, prompt: "Pesquise coisas caras")
+                                    .navigationTitle("iQueCaro")
+                                    
+                                    
+                                    /*.toolbarBackground(.teal, for: .navigationBar)
+                                     .toolbarBackground(.visible, for: .navigationBar)*/
+                                }
+                                .tabItem {
+                                    Label("Inicio", systemImage: "dollarsign.circle.fill")
+                                }
+                            
+                            VStack {
+                                Text("Settings Content")
+                                Spacer()
+                            }
+                            .tabItem {
+                                Label("Configurações", systemImage: "gearshape.fill")
+                            }
+                        }
+                    }
+                }
+                
+            /*
+             VStack {
+                HStack {
+                    Text("iQueCaro")
+                }
                 Image(systemName: "globe")
                     .imageScale(.large)
                     .foregroundColor(.accentColor)
@@ -26,8 +71,9 @@ struct ContentView: View {
                 .popover(isPresented: $showingPopover){
                         Text("Teste de caixa de dialogo")
                 }
-            })
-        .padding()
+            }
+             */
+            )
     }
 }
 
@@ -39,3 +85,9 @@ struct ContentView_Previews: PreviewProvider {
 
 var u = 5.isMultiple(of: 15)
 // print(u)
+
+struct Previews_ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}
